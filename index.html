@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07121e" />
+    <meta name="description" content="Two players. One mission. Learn Hebrew together." />
+    <title>OPERATION HEBREW — Two Players. One Mission.</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <style>
+      .boot-help { max-width: 680px; margin: 12vh auto; padding: 32px; color: #edf4f7; background: #0b1927; border: 1px solid #254153; border-radius: 16px; font: 16px/1.6 'Segoe UI', sans-serif; }
+      .boot-help h1 { margin: 0 0 12px; color: #a8edff; font-size: 24px; }
+      .boot-help code { display: block; margin: 12px 0; padding: 12px; overflow-wrap: anywhere; color: #a8edff; background: #07121e; border-radius: 8px; }
+      .boot-help p { color: #b7c8d2; }
+    </style>
+  </head>
+  <body>
+    <div id="app" class="app-shell">
+      <div class="ambient-grid" aria-hidden="true"></div>
+      <div class="ambient-glow glow-one" aria-hidden="true"></div>
+      <div class="ambient-glow glow-two" aria-hidden="true"></div>
+      <header class="topbar">
+        <a class="brand-lockup" href="#" aria-label="Operation Hebrew home">
+          <span class="brand-mark"><i></i><i></i><i></i></span>
+          <span>FIELD SYSTEMS <b>/ 07</b></span>
+        </a>
+        <div class="topbar-right">
+          <span class="system-status"><i></i> LOCAL SYSTEM</span>
+          <button id="header-sound" class="icon-button" title="Sound settings" aria-label="Sound settings">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4h4l5 4V6l-5 4H4Z"/><path d="M16 9a5 5 0 0 1 0 6m2-9a9 9 0 0 1 0 12"/></svg>
+          </button>
+        </div>
+      </header>
+      <main id="screen" class="screen">
+        <section class="boot-help" role="status">
+          <h1>המשחק נטען…</h1>
+          <p>אם ההודעה הזו נשארת, צריך להפעיל את המשחק דרך שרת הפיתוח ולא לפתוח את קובץ HTML ישירות.</p>
+          <p>בתיקיית <strong>operation-hebrew</strong> פתחו PowerShell והריצו:</p>
+          <code>npm install</code>
+          <code>npm run dev</code>
+          <p>לאחר מכן פתחו בדפדפן את הכתובת שמופיעה בטרמינל (בדרך כלל <strong>http://localhost:5173</strong>).</p>
+        </section>
+      </main>
+      <div id="toast-region" class="toast-region" aria-live="polite"></div>
+      <div id="modal-root"></div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
